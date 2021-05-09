@@ -1,9 +1,6 @@
 'use strict';
 
-//luodaan kaikki HTML elementit
-//tää on ihan kehitysvammasta settiä mut korjaa myöhemmin
-//korjaa joskus koska tää koodi on oikeesti aivan perseestä
-//esim `${[i]} avulla pystyy tekee täst paljon hienomman
+// could write this better
 const baseCalculator = () =>{
     const main = document.getElementById('maincalculator');
     const base = document.createElement('div');

@@ -8,7 +8,7 @@ initmain()
 console.log("init ok")
 
 
-//töiden linkkejen dom, uusien töiden linkit tähän!
+// my works here
 const myworks = () => {
     const ul = document.createElement('ul')
     const article = createArticle()
@@ -19,16 +19,10 @@ const myworks = () => {
     article.appendChild(ul)
 }
 
-
-
-//info sivun html
+// html for the info page
 const info = () => {
     const article = createArticle()
 
-    //const main = document.getElementById('main');
-    //main.innerHTML = null;
-    //const article = document.createElement('article');
-    //article.id = 'infoarticle';
     const h1 = document.createElement('h1');
     h1.innerHTML = 'Hei, olen Valtteri';
     const img = document.createElement('img');

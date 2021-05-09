@@ -7,7 +7,7 @@ let score = 0;
 
 
 //creating all the HTML elements
-const elements = () =>{
+const elements = () => {
     const main = document.getElementById('mainwhack-a-mole');
     const section = document.createElement('section');
     const h1 = document.createElement('h1');
@@ -49,7 +49,7 @@ const randomtime = (min, max) =>{
     return Math.random() * (max - min) + min;
 }
 
-const getNumber = () =>{
+const getNumber = () => {
     let selectedhole;
     do {
         const myholes = document.getElementsByClassName('hole');
@@ -62,7 +62,7 @@ const getNumber = () =>{
 
 }
 
-const peek = () =>{
+const peek = () => {
     const time = randomtime(200, 1000)
     const hole = getNumber();
     hole.classList.add('peek');
@@ -74,27 +74,27 @@ const peek = () =>{
     }, time);
 }
 
-const startGame = () =>{
+const startGame = () => {
     score = 0;
     timeOut = false;
     peek();
     setTimeout(() => timeOut = true, 10000)
 }
 
-const buttonEvent = () =>{
+const buttonEvent = () => {
     const button = document.getElementById('startbutton');
     button.addEventListener('click', startGame)
 }
 
 buttonEvent();
   
-const addingsScore = () =>{
+const addingsScore = () => {
     const scoreboard = document.getElementById('score');
     score++;
     scoreboard.innerHTML = score;
 }
 
-const molesevent = (e) =>{
+const molesevent = (e) => {
     console.log('hit');
     if(!e.isTrusted){ //prevents cheating
         return;
@@ -106,7 +106,7 @@ const molesevent = (e) =>{
                     }  
         }
 
-   const listener = () =>{
+   const listener = () => {
        const moles = document.querySelectorAll('.mole');
         for(let i = 0; i < moles.length; i++){
             moles[i].addEventListener('click', molesevent);
