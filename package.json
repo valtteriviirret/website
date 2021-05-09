@@ -1,0 +1,22 @@
+{
+  "name": "valtteriviirret.xyz",
+  "version": "1.0.0",
+  "description": "My own website. Live at [valtteriviirret.xyx](https://valtteriviirret.xyz)",
+  "main": "index.js",
+  
+
+  
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/valtteriviirret/valtteriviirret.xyz.git"
+  },
+  "author": "Valtteri Viirret",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/valtteriviirret/valtteriviirret.xyz/issues"
+  },
+  "homepage": "https://github.com/valtteriviirret/valtteriviirret.xyz#readme"
+}
