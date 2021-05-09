@@ -1,118 +1,81 @@
 'use strict';
 
-// could write this better
-const baseCalculator = () =>{
+
+// creating button
+const mB = (text, id, line) => {
+    const elem = document.createElement('button');
+    elem.innerHTML = text;
+    elem.id = id;
+    line.appendChild(elem);
+    return elem;
+}
+
+// creating form
+const createLine = (id, base) => {
+    const elem = document.createElement('div');
+    elem.id = id;
+    base.appendChild(elem);
+    return elem;
+}
+
+
+const baseCalculator = () => {
     const main = document.getElementById('maincalculator');
     const base = document.createElement('div');
     base.classList.add('base');
     const screen = document.createElement('input');
     screen.type = 'text';
     screen.id = 'screen';
-    const firstline = document.createElement('div');
-    firstline.id = 'firstline';
-    const secondline = document.createElement('div');
-    secondline.id = 'secondline';
-    const thirdline = document.createElement('div');
-    thirdline.id = 'thirdline';
-    const fourthline = document.createElement('div');
-    fourthline.id = 'fourthline';
-    const fifthline = document.createElement('div');
-    fifthline.id = 'fifthline';
-    const c = document.createElement('button');
-    c.innerHTML = 'C';
-    c.id = 'c';
-    const divide = document.createElement('button');
-    divide.innerHTML = '/'
-    divide.id = 'divide';
-    const seven = document.createElement('button');
-    seven.innerHTML = '7';
-    const eight = document.createElement('button');
-    eight.innerHTML = '8';
-    const nine = document.createElement('button');
-    nine.innerHTML = '9';
-    const multiplier = document.createElement('button');
-    multiplier.innerHTML = 'x';
-    multiplier.id = 'multiplier';
-    const four = document.createElement('button');
-    four.innerHTML = '4';
-    const five = document.createElement('button');
-    five.innerHTML = '5';
-    const six = document.createElement('button');
-    six.innerHTML = '6';
-    const minus = document.createElement('button');
-    minus.innerHTML = '-';
-    minus.id = 'minus';
-    const one = document.createElement('button');
-    one.innerHTML = '1';
-    const two = document.createElement('button');
-    two.innerHTML = '2';
-    const three = document.createElement('button');
-    three.innerHTML = '3';
-    const plus = document.createElement('button');
-    plus.innerHTML = '+';
-    plus.id = 'plus';
-    const zero = document.createElement('button');
-    zero.innerHTML = '0';
-    const dot = document.createElement('button');
-    dot.innerHTML = '.';
-    dot.id = 'dot';
-    const equals = document.createElement('button');
-    equals.innerHTML = '=';
-    equals.id = 'equals';
+    
+    const firstline = createLine('firstline', base);
+    const secondline = createLine('secondline', base);
+    const thirdline = createLine('thirdline', base);
+    const fourthline = createLine('fourthline', base);
+    const fifthline = createLine('fifthline', base);
+    
+    mB('C', 'c', firstline);
+    mB('/', 'divide', firstline);
+    mB('x', 'multiplier', secondline);
+    mB('-', 'minus', thirdline);
+    mB('+', 'plus', fourthline);
+    mB('.', 'dot', fifthline);
+    mB('=', 'equals',fifthline);
+    mB('0', 'empty', fifthline);
 
-    
     base.appendChild(screen);
-    firstline.appendChild(c);
-    
-    firstline.appendChild(divide);
-    secondline.appendChild(seven);
-    secondline.appendChild(eight);
-    secondline.appendChild(nine);
-    secondline.appendChild(multiplier);
-    thirdline.appendChild(four);
-    thirdline.appendChild(five);
-    thirdline.appendChild(six);
-    thirdline.appendChild(minus);
-    fourthline.appendChild(one);
-    fourthline.appendChild(two);
-    fourthline.appendChild(three);
-    fourthline.appendChild(plus);
-    fifthline.appendChild(zero);
-    fifthline.appendChild(dot);
-    fifthline.appendChild(equals);
-    base.appendChild(firstline);
-    base.appendChild(secondline);
-    base.appendChild(thirdline);
-    base.appendChild(fourthline);
-    base.appendChild(fifthline);
+
+    for(let i = 7; i < 10; i++) {
+        mB([i].toString(), 'empty', secondline);
+    }
+
+    for(let i = 4; i < 7; i++) {
+        mB([i].toString(), 'empty', thirdline);
+    }
+
+    for(let i = 1; i < 4; i++) {
+        mB([i].toString(), 'empty', fourthline);
+    }
+
     main.appendChild(base);
-  
 }
 
 baseCalculator();
-//addding class to all non number elements
-//yes this is tiny bit retarded but I'm still going with it
+
 
 const notNumberClass = () =>{
-    const divide = document.getElementById('divide');
-    divide.classList.add('calculatorElement');
-    const multiplier = document.getElementById('multiplier');
-    multiplier.classList.add('calculatorElement');
-    const minus = document.getElementById('minus');
-    minus.classList.add('calculatorElement');
-    const plus = document.getElementById('plus');
-    plus.classList.add('calculatorElement')
-    const dot = document.getElementById('dot');
-    dot.classList.add('calculatorElement');
-    const equals = document.getElementById('equals');
-    equals.classList.add('calculatorElement')
+    document.getElementById('divide').classList.add('calculatorElement');
+    document.getElementById('multiplier').classList.add('calculatorElement');
+    document.getElementById('minus').classList.add('calculatorElement');
+    document.getElementById('plus').classList.add('calculatorElement')
+    document.getElementById('dot').classList.add('calculatorElement');
+    document.getElementById('equals').classList.add('calculatorElement');
 }
 
 notNumberClass();
 
 
 //adding class to button swith numbers
-const numberClass = () =>{
+const numberClass = () => {
     const button = document.getElementsByTagName('button');
 
     for(let i = 0; i < button.length; i++){
@@ -125,7 +88,7 @@ const numberClass = () =>{
 numberClass();
 
 //adding class to div lines
-const divClass = () =>{
+const divClass = () => {
     const div = document.getElementsByTagName('div');
 
     for(let i = 0; i < div.length; i++){
@@ -138,7 +101,7 @@ const divClass = () =>{
 divClass();
 
 //addeventlisteners for buttons
-const choosingelements = () =>{
+const choosingelements = () => {
     let input = document.getElementById('screen');
     document.querySelectorAll('.calculatorNumber').forEach(el =>{
         el.addEventListener('click', () =>{
@@ -150,7 +113,7 @@ const choosingelements = () =>{
 choosingelements();
 
 //making so that dot actually leaves a dot
-const dot = () =>{
+const dot = () => {
     const dot = document.getElementById('dot');
     const screen = document.getElementById('screen');
     dot.addEventListener('click', () =>{
@@ -197,7 +160,7 @@ listenerforoperators();
 
 
 //function for generating the second number
-const secondnum = (calculation) =>{
+const secondnum = (calculation) => {
     const screen = document.getElementById('screen');
     let num2 = screen.value.substring(screen.value.indexOf(calculation));
     let num2wsign = num2.slice(1);
@@ -206,7 +169,7 @@ const secondnum = (calculation) =>{
 }
 
 //creating addition with using the first number
-const addition = () =>{
+const addition = () => {
     const addition = document.getElementById('plus');
     addition.addEventListener('click', () =>{
         const screen = document.getElementById('screen');
@@ -226,7 +189,7 @@ const addition = () =>{
 addition();
 
 //function for substraction
-const substraction = () =>{
+const substraction = () => {
     const minus = document.getElementById('minus');
     minus.addEventListener('click', () =>{
         const screen = document.getElementById('screen');
@@ -246,7 +209,7 @@ const substraction = () =>{
 substraction();
 
 //function for divide
-const divide = () =>{
+const divide = () => {
     const dividebutton = document.getElementById('divide');
     dividebutton.addEventListener('click', () =>{
         const screen = document.getElementById('screen');

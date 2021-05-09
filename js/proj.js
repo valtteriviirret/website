@@ -1,8 +1,8 @@
 'use strict';
 
-export default class Proj {
+// easy way to start new project
 
-    projectList = []
+export default class Proj {
 
     constructor(filename, description, ul) {
         this.filename = filename
@@ -18,8 +18,6 @@ export default class Proj {
         link.innerHTML = this.description
         li.appendChild(link)
         this.ul.appendChild(li)
-        this.projectList.push(this)
-        console.log(this.projectList.length)
     }
 }
 

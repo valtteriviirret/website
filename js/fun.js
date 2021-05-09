@@ -9,15 +9,11 @@ In respect of Kotlins fun keyword
 */
 
 
-//old button
-//const button = document.getElementById('nightswitch');
-
-
 // press button for click function
-export const selectPlace = (id, func) => {
-    const b = $({id: id})
-    b.addEventListener('click', func)   
+export const listen = (id, func) => {
+    $({id: id}).addEventListener('click', func)   
 }
+
 
 export const createArticle = () => {
     const main = document.getElementById('main');
@@ -28,8 +24,6 @@ export const createArticle = () => {
     return article
     
 }
-
-
 
 
 // log shortcut
@@ -48,13 +42,6 @@ export const mobileCheck = () => {
 
 // darkmode
 export const darkmode = () => {
-    const main = $({id: 'main'})
-    main.classList.toggle('grey');
-    const container = $({id: 'container'})
-    container.classList.toggle('black'); 
-}
-
-export const initmain = () => {
-    mobileCheck()
-    darkmode()
+    $({id: 'main'}).classList.toggle('grey');
+    $({id: 'container'}).classList.toggle('black')
 }

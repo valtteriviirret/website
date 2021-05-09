@@ -1,11 +1,13 @@
 'use strict'
 
-import {initmain, selectPlace, createArticle} from '../js/fun.js';
+import {mobileCheck} from '../js/fun.js';
+import {listen} from '../js/fun.js';
+import {createArticle} from '../js/fun.js';
+import {darkmode} from '../js/fun.js';
 import Proj from '../js/proj.js';
 
-initmain()
+mobileCheck()
 
-console.log("init ok")
 
 
 // my works here
@@ -40,6 +42,7 @@ const info = () => {
     main.appendChild(article);
 }
 
-selectPlace('info', info)
-selectPlace('stuff', myworks)
+listen('info', info)
+listen('stuff', myworks)
+listen('nightswitch', darkmode)
 
