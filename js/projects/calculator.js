@@ -62,7 +62,7 @@ const baseCalculator = () => {
 baseCalculator();
 
 
-const notNumberClass = () =>{
+const notNumberClass = () => {
     document.getElementById('divide').classList.add('calculatorElement');
     document.getElementById('multiplier').classList.add('calculatorElement');
     document.getElementById('minus').classList.add('calculatorElement');
