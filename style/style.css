@@ -61,6 +61,7 @@ main{
     position: absolute;
     opacity: 0;
   }
+
   
   .switch {
     display: inline-block;
@@ -111,8 +112,6 @@ main{
   /*JavaScript calculator*/
 
   /*divs size */
-
-
 .calculatorNumber{
     
     width: 6em;
@@ -142,7 +141,6 @@ main{
 
 .hole:after{
   display: block;
-  /*muista lisätä joku hyvä backgroundi */
   content: "";
   width: 100%;
   height: 90px;

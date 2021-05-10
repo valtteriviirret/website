@@ -45,3 +45,12 @@ export const darkmode = () => {
     $({id: 'main'}).classList.toggle('grey');
     $({id: 'container'}).classList.toggle('black')
 }
+
+export const somelink = (href, innerHTML, append) => {
+    const tag = document.createElement('a');
+    tag.href = href
+    tag.innerHTML = innerHTML
+    tag.classList.add('infolink');
+    append.appendChild(tag)
+}
+

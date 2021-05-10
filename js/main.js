@@ -1,9 +1,6 @@
 'use strict'
 
-import {mobileCheck} from '../js/fun.js';
-import {listen} from '../js/fun.js';
-import {createArticle} from '../js/fun.js';
-import {darkmode} from '../js/fun.js';
+import {mobileCheck, listen, createArticle, darkmode, somelink} from '../js/fun.js';
 import Proj from '../js/proj.js';
 
 mobileCheck()
@@ -14,10 +11,13 @@ mobileCheck()
 const myworks = () => {
     const ul = document.createElement('ul')
     const article = createArticle()
-    new Proj('html/clock.html', 'Niilo22 kertoo kellon', ul)
-    new Proj('html/calculator.html', 'Laskin', ul)
-    new Proj('html/whack-a-mole.html', 'Osu Niiloon peli', ul)
-    new Proj('html/niilosound.html', 'Hassuja ääniä', ul)
+    
+    // in the morning make the rest of the html into js as well
+    
+    new Proj('Kello', 'Niilo22 kertoo kellon', ul, '../js/projects/clock.js')
+    new Proj('Calculator', 'Laskin', ul, '../js/projects/calculator.js')
+    new Proj('whack-a-mole', 'Osu Niiloon peli', ul, '../js/projects/whack-a-mole.js')
+    new Proj('Hassuja ääniä', 'Soundboard', ul, '../js/projects/niilosound.js')
     article.appendChild(ul)
 }
 
@@ -29,20 +29,17 @@ const info = () => {
 
     const h1 = document.createElement('h1');
     h1.innerHTML = 'Hei, olen Valtteri';
+    h1.id = 'infoh1';
     const img = document.createElement('img');
     img.src = '//users.metropolia.fi/~valttvii/pictures/kuva-valtteri.muokattu.jpg';
     img.alt = 'Valtteri';
-    const email = document.createElement('a');
-    email.href = 'mailto:viirretvaltteri@gmail.com';
-    email.innerHTML = 'viirretvaltteri@gmail.com';
-    const a = document.createElement('a');
-    a.href = 'https://github.com/valtteriviirret';
-    a.innerHTML = 'https://github.com/valtteriviirret';
+    img.classList.add('center')
+
     article.appendChild(h1);
     article.appendChild(img);
-    article.appendChild(email);
-    article.appendChild(a);
-    main.appendChild(article);
+    somelink('mailto:viirretvaltteri@gmail.com', 'viirretvaltteri@gmail.com', article);
+    somelink('https://github.com/valtteriviirret', 'github.com/valtteriviirret', article);
+    somelink('https://www.instagram.com/valtteriviirret/', 'instagram.com/valtteriviirret', article);
 }
 
 listen('info', info)
