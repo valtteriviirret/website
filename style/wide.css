@@ -10,14 +10,11 @@
 }
 
 .containerswitch {
-    position: absolute;
-    top: 0; right: 0; bottom: 61em; left: 80em;
-    height: 40px;
-    margin: auto;
-  }
+  top: 25px;
+}
 
 
-  main{
+main{
     position: relative;
     margin: 0;
     width: 100%;
@@ -33,7 +30,6 @@
   
 
 /*Calculator*/
-
 #screen{
   margin-top: 2em;
   height: 3em;

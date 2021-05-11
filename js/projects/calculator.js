@@ -2,7 +2,7 @@
 
 
 // creating button
-const mB = (text, id, line, operator) => {
+const mB = (text, id, line) => {
     const elem = document.createElement('button');
     elem.innerHTML = text;
     elem.id = id;

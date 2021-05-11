@@ -2,9 +2,9 @@
 
 import Htmltemplate from "./htmltemplate.js";
 
+// this class creates a link for a new project in main
+// pressing the link will open the script with HTML template
 
-
-// easy way to start new project
 export default class Proj{
 
     constructor(title, description, ul, scriptpath) {
@@ -23,6 +23,7 @@ export default class Proj{
         link.href = "about:blank"
         link.target = "_blank"
 
+        // opens up file
         link.addEventListener('click', this.makeHtml)
         
         link.innerHTML = this.description
@@ -30,10 +31,9 @@ export default class Proj{
         this.ul.appendChild(li)
     }
 
-    // make the html template
-    makeHtml = () => {
-        new Htmltemplate(this.title, this.scriptpath)
-    }
+    // make the html template to script
+    makeHtml = () => new Htmltemplate(this.title, this.scriptpath)
+    
 }
 
 

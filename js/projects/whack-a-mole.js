@@ -1,6 +1,4 @@
 'use strict';
-
-
 //global for timeout
 let timeOut = false;
 

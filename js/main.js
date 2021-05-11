@@ -12,8 +12,6 @@ const myworks = () => {
     const ul = document.createElement('ul')
     const article = createArticle()
     
-    // in the morning make the rest of the html into js as well
-    
     new Proj('Kello', 'Niilo22 kertoo kellon', ul, '../js/projects/clock.js')
     new Proj('Calculator', 'Laskin', ul, '../js/projects/calculator.js')
     new Proj('whack-a-mole', 'Osu Niiloon peli', ul, '../js/projects/whack-a-mole.js')
@@ -24,9 +22,6 @@ const myworks = () => {
 // html for the info page
 const info = () => {
     const article = createArticle()
-
-    // easy to create new from here
-
     const h1 = document.createElement('h1');
     h1.innerHTML = 'Hei, olen Valtteri';
     h1.id = 'infoh1';

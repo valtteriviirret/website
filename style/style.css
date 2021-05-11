@@ -38,6 +38,13 @@ main{
   
   }
 
+  .containerswitch {
+    position: fixed;
+    right: 10px;
+    height: 40px;
+    margin: auto;
+  }
+
 
 
   * {
@@ -161,7 +168,6 @@ main{
   margin: 0 auto;
 }
 
-
 .mole{
   background: url(/images/tattiniilo22.jpg) bottom center no-repeat;
   background-size: 100%;
@@ -187,3 +193,29 @@ main{
 #score{
   font-size: 1.5em;
 }
+
+  /*Info page*/
+  #infoh1 {
+    text-align: center;
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+ .infolink {
+   display: block;
+   text-align: center;
+   margin: 0.5em;
+   color: black;
+ }
+ 
+ a:hover {
+   color: #FB3640;
+ }
+ 
+ a:active {
+   color: black;
+ }

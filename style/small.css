@@ -16,6 +16,10 @@
     overflow: hidden;
   }
   
+
+
+
+
   /* Toggle Functionality */
   #toggle {
     display: none;
@@ -87,9 +91,6 @@
     transition: 0.6s;
     
   }
-
- 
-
   .button-toggle:before, .button-toggle:after {
     position: absolute;
     content: '';
@@ -179,46 +180,16 @@
   }
 
 
-  /* The dark mode switch */
-  .containerswitch {
-    position: absolute;
-    top: 0; right: 0; bottom: 52em; left: 25em;
-    height: 40px;
-    margin: auto;
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
   }
 
-
-  /*Info page*/
- #infoh1 {
-   text-align: center;
- }
- .center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-}
-
-.infolink {
-  display: block;
-  text-align: center;
-  margin: 0.5em;
-  color: black;
-}
-
-a:hover {
-  color: #FB3640;
-}
-
-a:active {
-  color: black;
-}
-
-
-
-
-
-
+  .containerswitch {
+    top: 50px;
+  }
 
 
   /*Niilo22 kello*/

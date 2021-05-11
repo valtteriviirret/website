@@ -1,5 +1,7 @@
 'use strict';
 
+// with this class you can create a basic HTML template for JS file
+// might add stuff later but works fine currently
 
 export default class Htmltemplate { 
     constructor(title, scriptpath) {
