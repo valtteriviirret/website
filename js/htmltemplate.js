@@ -14,9 +14,9 @@ export default class Htmltemplate {
     const w = window.open("")
     w.document.writeln
     (`
-    <!DOCTYPE html> 
     <html lang="en">
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
     <title>${this.title}</title>
     <link rel='stylesheet' type='text/css' href="/style/style.css">
     <link rel="stylesheet preload" href="/style/wide.css" as="style" media="(min-width: 1000px)">
@@ -25,7 +25,6 @@ export default class Htmltemplate {
     </head>
     <body>
     <main id='main'>
-    <h1>TESTI</h1>
     </main>
     <script src=${this.scriptpath}></script>
     </body>

@@ -1,4 +1,6 @@
 'use strict';
+
+
 //global for timeout
 let timeOut = false;
 
@@ -8,7 +10,7 @@ let score = 0;
 
 //creating all the HTML elements
 const elements = () => {
-    const main = document.getElementById('mainwhack-a-mole');
+    const main = document.getElementById('main');
     const section = document.createElement('section');
     const h1 = document.createElement('h1');
     h1.id = 'lyoniiloa';

@@ -2,7 +2,7 @@
 
 
 // creating button
-const mB = (text, id, line) => {
+const mB = (text, id, line, operator) => {
     const elem = document.createElement('button');
     elem.innerHTML = text;
     elem.id = id;
@@ -20,7 +20,7 @@ const createLine = (id, base) => {
 
 
 const baseCalculator = () => {
-    const main = document.getElementById('maincalculator');
+    const main = document.getElementById('main');
     const base = document.createElement('div');
     base.classList.add('base');
     const screen = document.createElement('input');
@@ -129,8 +129,8 @@ const clear = () => {
     const clearbutton = document.getElementById('c');
     const screen = document.getElementById('screen');
     clearbutton.addEventListener('click', () =>{
-        screen.value = '';
-        location.reload();
+        screen.value = 0;
+        //location.reload();
         
     })
 }

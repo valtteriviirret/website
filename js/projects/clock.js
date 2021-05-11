@@ -1,6 +1,6 @@
 'use strict';
 
-
+// kinda ugly cos cannot add imports but it works and this is just a test
 const createHtml = () => {
     const main = document.getElementById('main')
     main.innerHTML = null;
