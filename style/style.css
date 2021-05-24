@@ -3,6 +3,13 @@
 }
 
 
+.list_item {
+  position: relative;
+  transition: transform .25s ease;
+}
+
+
+
 .red {
   background-color: #200000   !important;
 }
@@ -44,7 +51,7 @@ body {
 /*Info page*/
 #infoh1 {
  text-align: center;
- color:	#00FF00
+ color:	#8B0000
 }
   
 .center {
@@ -61,11 +68,11 @@ body {
 }
    
 a:hover {
-  color:#FB3640
+  color:#88D18A
 }
 
 a {
-  color:	#00FF00
+  color:#8B0000
 }
 
 * {

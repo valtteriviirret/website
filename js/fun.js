@@ -1,11 +1,10 @@
 'use strict'
 
-import {$} from '../js/dom.js';
+import {$, make } from '../js/dom.js';
 
 
 /*
-This script has mostly static functions
-In respect of Kotlins fun keyword
+    This script has mostly static functions
 */
 
 
@@ -16,9 +15,9 @@ export const listen = (id, func) => {
 
 
 export const createArticle = () => {
-    const main = document.getElementById('main');
+    const main = $({id: 'main'});
     main.innerHTML = null;
-    const article = document.createElement('article')
+    const article = make('article')
     main.appendChild(article);
     
     return article
@@ -48,7 +47,7 @@ export const darkmode = () => {
 }
 
 export const somelink = (href, innerHTML, append) => {
-    const tag = document.createElement('a');
+    const tag = make('a');
     tag.href = href
     tag.innerHTML = innerHTML
     tag.classList.add('infolink');

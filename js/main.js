@@ -11,11 +11,14 @@ mobileCheck()
 const myworks = () => {
     const ul = document.createElement('ul')
     const article = createArticle()
+
+    const projectList = [];
     
     new Proj('Kello', 'Niilo22 kertoo kellon', ul, '../js/projects/clock.js')
     new Proj('Calculator', 'Laskin', ul, '../js/projects/calculator.js')
     new Proj('whack-a-mole', 'Osu Niiloon peli', ul, '../js/projects/whack-a-mole.js')
     new Proj('Hassuja ääniä', 'Soundboard', ul, '../js/projects/niilosound.js')
+
 
     article.appendChild(ul)
 }

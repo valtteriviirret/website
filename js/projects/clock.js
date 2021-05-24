@@ -1,6 +1,6 @@
 'use strict';
 
-// kinda ugly cos cannot add imports but it works and this is just a test
+// maybe make dom later
 const createHtml = () => {
     const main = document.getElementById('main')
     main.innerHTML = null;
@@ -29,7 +29,7 @@ const updateClock = () => {
     let currentMinutes = currentTime.getMinutes();
     let currentSeconds = currentTime.getSeconds();
 
-    // adding 0 if its 10
+    // adding 0 if it's 10
     currentMinutes = (currentMinutes < 10 ? "0" : "") + currentMinutes;
     currentSeconds = (currentSeconds < 10 ? "0" : "") + currentSeconds;
 

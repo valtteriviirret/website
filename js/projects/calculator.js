@@ -32,6 +32,8 @@ const baseCalculator = () => {
     const thirdline = createLine('thirdline', base);
     const fourthline = createLine('fourthline', base);
     const fifthline = createLine('fifthline', base);
+
+    base.appendChild(screen);
     
     mB('C', 'c', firstline);
     mB('/', 'divide', firstline);
@@ -42,7 +44,6 @@ const baseCalculator = () => {
     mB('=', 'equals',fifthline);
     mB('0', 'empty', fifthline);
 
-    base.appendChild(screen);
 
     for(let i = 7; i < 10; i++) {
         mB([i].toString(), 'empty', secondline);

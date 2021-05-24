@@ -18,6 +18,7 @@ export default class Proj {
     // make the link
     create = () => {
         const li = document.createElement('li')
+        li.classList.add("list_item")
         const link = document.createElement('a')
         
         link.href = "about:blank"
