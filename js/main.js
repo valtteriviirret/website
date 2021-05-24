@@ -16,6 +16,7 @@ const myworks = () => {
     new Proj('Calculator', 'Laskin', ul, '../js/projects/calculator.js')
     new Proj('whack-a-mole', 'Osu Niiloon peli', ul, '../js/projects/whack-a-mole.js')
     new Proj('Hassuja ääniä', 'Soundboard', ul, '../js/projects/niilosound.js')
+
     article.appendChild(ul)
 }
 
@@ -24,7 +25,7 @@ const info = () => {
     const article = createArticle()
     const h1 = document.createElement('h1');
     h1.innerHTML = 'Hei, olen Valtteri';
-    h1.id = 'infoh1';
+    h1.id = 'infoh1'
     const img = document.createElement('img');
     img.src = '//users.metropolia.fi/~valttvii/pictures/kuva-valtteri.muokattu.jpg';
     img.alt = 'Valtteri';
@@ -37,7 +38,8 @@ const info = () => {
     somelink('https://www.instagram.com/valtteriviirret/', 'instagram.com/valtteriviirret', article);
 }
 
+listen('nightswitch', darkmode)
 listen('info', info)
 listen('stuff', myworks)
-listen('nightswitch', darkmode)
+
 

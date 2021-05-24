@@ -5,7 +5,7 @@ import Htmltemplate from "./htmltemplate.js";
 // this class creates a link for a new project in main
 // pressing the link will open the script with HTML template
 
-export default class Proj{
+export default class Proj {
 
     constructor(title, description, ul, scriptpath) {
         this.title = title

@@ -41,9 +41,10 @@ export const mobileCheck = () => {
 }
 
 // darkmode
+// this is more or less very bad code
 export const darkmode = () => {
-    $({id: 'main'}).classList.toggle('grey');
-    $({id: 'container'}).classList.toggle('black')
+    $({id: 'main'}).classList.toggle('black');
+    $({id: 'container'}).classList.toggle('red');
 }
 
 export const somelink = (href, innerHTML, append) => {
