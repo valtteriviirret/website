@@ -1,6 +1,6 @@
 'use strict'
 
-import {$, make } from '../js/dom.js';
+import { $, make } from '../js/dom.js';
 
 
 /*
@@ -46,7 +46,7 @@ export const darkmode = () => {
     $({id: 'container'}).classList.toggle('red');
 }
 
-export const somelink = (href, innerHTML, append) => {
+export const LINK = (href, innerHTML, append) => {
     const tag = make('a');
     tag.href = href
     tag.innerHTML = innerHTML

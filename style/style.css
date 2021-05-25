@@ -2,10 +2,8 @@
     display: none;
 }
 
-
-.list_item {
-  position: relative;
-  transition: transform .25s ease;
+ul {
+  list-style-type: none;
 }
 
 

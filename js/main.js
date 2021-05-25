@@ -1,7 +1,8 @@
 'use strict'
 
-import {mobileCheck, listen, createArticle, darkmode, somelink} from '../js/fun.js';
+import { mobileCheck, listen, createArticle, darkmode, LINK } from '../js/fun.js';
 import Proj from '../js/proj.js';
+import { make } from '../js/dom.js';
 
 mobileCheck()
 
@@ -12,6 +13,7 @@ const myworks = () => {
     const ul = document.createElement('ul')
     const article = createArticle()
 
+    // make a list of all projects. Might make later
     const projectList = [];
     
     new Proj('Kello', 'Niilo22 kertoo kellon', ul, '../js/projects/clock.js')
@@ -20,25 +22,28 @@ const myworks = () => {
     new Proj('Hassuja ääniä', 'Soundboard', ul, '../js/projects/niilosound.js')
 
 
+    LINK('../EFTDweb/index.html', 'Pelilinkki', ul)
+    
+
     article.appendChild(ul)
 }
 
 // html for the info page
 const info = () => {
     const article = createArticle()
-    const h1 = document.createElement('h1');
+    const h1 = make('h1');
     h1.innerHTML = 'Hei, olen Valtteri';
     h1.id = 'infoh1'
-    const img = document.createElement('img');
+    const img = make('img');
     img.src = '//users.metropolia.fi/~valttvii/pictures/kuva-valtteri.muokattu.jpg';
     img.alt = 'Valtteri';
     img.classList.add('center')
 
     article.appendChild(h1);
     article.appendChild(img);
-    somelink('mailto:viirretvaltteri@gmail.com', 'viirretvaltteri@gmail.com', article);
-    somelink('https://github.com/valtteriviirret', 'github.com/valtteriviirret', article);
-    somelink('https://www.instagram.com/valtteriviirret/', 'instagram.com/valtteriviirret', article);
+    LINK('mailto:viirretvaltteri@gmail.com', 'viirretvaltteri@gmail.com', article);
+    LINK('https://github.com/valtteriviirret', 'github.com/valtteriviirret', article);
+    LINK('https://www.instagram.com/valtteriviirret/', 'instagram.com/valtteriviirret', article);
 }
 
 listen('nightswitch', darkmode)

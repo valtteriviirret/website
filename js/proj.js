@@ -1,5 +1,7 @@
 'use strict';
 
+import { make } from '../js/dom.js'
+
 import Htmltemplate from "./htmltemplate.js";
 
 // this class creates a link for a new project in main
@@ -15,11 +17,13 @@ export default class Proj {
         this.create()
     }
 
+    
     // make the link
     create = () => {
-        const li = document.createElement('li')
-        li.classList.add("list_item")
-        const link = document.createElement('a')
+        const li = make('li')
+        const link = make('a')
+
+        link.classList.add('infolink')
         
         link.href = "about:blank"
         link.target = "_blank"
