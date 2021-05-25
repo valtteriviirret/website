@@ -1,0 +1,45 @@
+.nav{
+    text-align: center;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+
+.nav-item{
+    padding-left: 3em;
+    
+}
+
+.containerswitch {
+  top: 25px;
+}
+
+
+main{
+    position: relative;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+/*Info page*/
+
+#infoarticle{
+  text-align: center;
+}
+  
+
+/*Calculator*/
+#screen{
+  margin-top: 2em;
+  height: 3em;
+  font-size: 2vw;
+}
+
+#fifthline button{
+  transform: translate(3em);
+}
+
+#firstline button{
+  transform: translate(6em);
+}
