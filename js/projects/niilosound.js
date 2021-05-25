@@ -1,26 +1,32 @@
-console.log("niilosoundbar created")
-
+// an array of all audiosounds
+const audiolist = []
 
 const main = () => {
     const main = document.getElementById('main')
     main.innerHTML = null;
     const article = document.createElement('article')
 
+    for(let i = 0; i < 18; i++) 
+    {
+        audiolist[i] = new Audio(`..sounds/niilo${i}.mp3`)
+    }
+    // null check
+    for(let i = 0; i < audiolist.length; i++)
+    {
+        // creating button
+        let btn = document.createElement('button')
+        btn.style.bottom += "5px"
+        btn.innerHTML = `Niilosound ${i}`
 
-    const testbutton = document.createElement('button')
-    testbutton.value = "Click me!"
+        // lets see if this works
+        btn.addEventListener('click', audiolist[i].play)
 
-    testbutton.addEventListener('click', player)
-    article.appendChild(testbutton)
-
+        article.appendChild(btn)
+        
+    }
     main.appendChild(article)
-
 }
 
-const player = () => {
-    const audio = new Audio('../sounds/niilo0.mp3')
-    audio.play()
-}
 
 main();
 

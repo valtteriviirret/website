@@ -3,9 +3,7 @@
 import { $, make } from '../js/dom.js';
 
 
-/*
-    This script has mostly static functions
-*/
+// functions used in another script
 
 
 // press button for click function
