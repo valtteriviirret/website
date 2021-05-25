@@ -1,5 +1,5 @@
 .vscode
 sounds/*
-EFTDweb/*
+/EFTDweb/*
 images/*
 package.json
