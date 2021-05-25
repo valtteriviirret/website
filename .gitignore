@@ -1,9 +1,0 @@
-.vscode
-/sounds/*
-EFTDweb/**
-/images/*
-package.json
-
-*
-*/
-!.gitignore
