@@ -1,11 +1,8 @@
-/*
-!.gitignore
-!/avatar
-!/flags
-
 .vscode
 images
 package.json
 package-lock.json
 server.js
 node_modules
+
+public
