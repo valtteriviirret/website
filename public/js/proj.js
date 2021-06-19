@@ -1,6 +1,6 @@
 'use strict';
 
-import { make } from '../js/dom.js'
+import { make } from './dom.js'
 
 import Htmltemplate from "./htmltemplate.js";
 

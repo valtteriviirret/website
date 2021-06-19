@@ -1,9 +1,9 @@
 'use strict'
 
-import { $, make } from '../js/dom.js';
+import { $, make } from './dom.js';
 
 
-// functions used in another script
+// functions used in another scripts
 
 
 // press button for click function

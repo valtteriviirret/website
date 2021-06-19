@@ -1,8 +1,8 @@
 'use strict'
 
-import { mobileCheck, listen, createArticle, darkmode, LINK } from '../js/fun.js';
-import Proj from '../js/proj.js';
-import { make } from '../js/dom.js';
+import { mobileCheck, listen, createArticle, darkmode, LINK } from './fun.js';
+import Proj from './proj.js';
+import { make } from './dom.js';
 
 mobileCheck()
 
