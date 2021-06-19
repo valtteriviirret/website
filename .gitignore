@@ -1,8 +1,11 @@
+/*
+!.gitignore
+!/avatar
+!/flags
+
 .vscode
-EFTDweb/**
 images
 package.json
 package-lock.json
 server.js
 node_modules
-notes.txt
